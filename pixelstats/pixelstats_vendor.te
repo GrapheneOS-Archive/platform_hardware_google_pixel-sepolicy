@@ -22,18 +22,21 @@ get_prop(pixelstats_vendor, smart_idle_maint_enabled_prop)
 allow pixelstats_vendor fwk_stats_service:service_manager find;
 binder_call(pixelstats_vendor, stats_service_server)
 
-allow pixelstats_vendor sysfs_zram:dir search;
-allow pixelstats_vendor sysfs_zram:file r_file_perms;
+# Pixel MM Metrics: (Atoms: PixelMmMetricsPerHour, PixelMmMetricsPerDay,
+#                    CmaStatus, CmaStatusExt, ZramBdStat, ZramMmStat)
+allow pixelstats_vendor kernel:dir search;
+allow pixelstats_vendor kernel:file r_file_perms;
+allow pixelstats_vendor proc_meminfo:file r_file_perms;
+allow pixelstats_vendor proc_pressure_cpu:file r_file_perms;
+allow pixelstats_vendor proc_pressure_io:file r_file_perms;
+allow pixelstats_vendor proc_pressure_mem:file r_file_perms;
+allow pixelstats_vendor proc_stat:file r_file_perms;
+allow pixelstats_vendor proc_vmstat:file r_file_perms;
+allow pixelstats_vendor sysfs_dma_heap:dir search;
+allow pixelstats_vendor sysfs_dma_heap:file r_file_perms;
+allow pixelstats_vendor sysfs_ion:dir search;
+allow pixelstats_vendor sysfs_ion:file r_file_perms;
 allow pixelstats_vendor sysfs_pixel_stat:dir r_dir_perms;
 allow pixelstats_vendor sysfs_pixel_stat:file r_file_perms;
-
-userdebug_or_eng(`
-  allow pixelstats_vendor { proc_pressure_cpu proc_pressure_io proc_pressure_mem }:file r_file_perms;
-  allow pixelstats_vendor proc_vmstat:file r_file_perms;
-  allow pixelstats_vendor sysfs_ion:dir search;
-  allow pixelstats_vendor sysfs_ion:file r_file_perms;
-  allow pixelstats_vendor sysfs_dma_heap:dir search;
-  allow pixelstats_vendor sysfs_dma_heap:file r_file_perms;
-  allow pixelstats_vendor kernel:dir search;
-  allow pixelstats_vendor kernel:file r_file_perms;
-')
+allow pixelstats_vendor sysfs_zram:dir search;
+allow pixelstats_vendor sysfs_zram:file r_file_perms;
