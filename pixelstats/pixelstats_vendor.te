@@ -40,3 +40,7 @@ allow pixelstats_vendor sysfs_pixel_stat:dir r_dir_perms;
 allow pixelstats_vendor sysfs_pixel_stat:file r_file_perms;
 allow pixelstats_vendor sysfs_zram:dir search;
 allow pixelstats_vendor sysfs_zram:file r_file_perms;
+
+# Pixel MM Metrics 2024a2
+r_dir_file(pixelstats_vendor, proc_vendor_mm)
+

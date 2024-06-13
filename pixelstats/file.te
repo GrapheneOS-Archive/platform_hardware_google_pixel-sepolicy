@@ -1,2 +1,3 @@
 type debugfs_mgm, debugfs_type, fs_type;
 type sysfs_pixel_stat, fs_type, sysfs_type;
+type proc_vendor_mm, fs_type, proc_type;
