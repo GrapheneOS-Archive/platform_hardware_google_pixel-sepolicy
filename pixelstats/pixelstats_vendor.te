@@ -43,4 +43,4 @@ allow pixelstats_vendor sysfs_zram:file r_file_perms;
 
 # Pixel MM Metrics 2024a2
 r_dir_file(pixelstats_vendor, proc_vendor_mm)
-
+r_dir_file(pixelstats_vendor, sysfs_vendor_mm)
