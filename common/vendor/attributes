@@ -1,2 +1,5 @@
 attribute pixel_battery_domain;
 attribute pixel_battery_service_type;
+
+#touch attribute for touch-related properties.
+attribute touch_property_type;
