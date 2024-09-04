@@ -1,5 +1,6 @@
 # Storage Health HAL
 type sysfs_scsi_devices_0000, sysfs_type, fs_type;
+type vendor_sysfs_mmc_devices, sysfs_type, fs_type;
 
 # PixelStats_vendor
 type sysfs_pixelstats, fs_type, sysfs_type;
