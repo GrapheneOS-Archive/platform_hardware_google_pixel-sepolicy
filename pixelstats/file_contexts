@@ -1,3 +1,0 @@
-# pixelstats binary
-/vendor/bin/pixelstats-vendor           u:object_r:pixelstats_vendor_exec:s0
-

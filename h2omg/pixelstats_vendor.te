@@ -1,0 +1,8 @@
+# Access needed for pixelstatus
+allow pixelstats_vendor sysfs_h2omg_drv:dir search;
+allow pixelstats_vendor sysfs_h2omg_dev:dir search;
+allow pixelstats_vendor sysfs_h2omg_drv:dir r_dir_perms;
+allow pixelstats_vendor sysfs_h2omg_dev:dir r_dir_perms;
+allow pixelstats_vendor sysfs_h2omg_dev:file r_file_perms;
+allow pixelstats_vendor sysfs_h2omg_fuse:file r_file_perms;
+

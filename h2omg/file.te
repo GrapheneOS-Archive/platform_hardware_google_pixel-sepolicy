@@ -1,3 +1,3 @@
-type sysfs_h2omg, fs_type, sysfs_type;
-type sysfs_h2omgatl, fs_type, sysfs_type;
-type sysfs_h2omgslg, fs_type, sysfs_type;
+type sysfs_h2omg_drv, fs_type, sysfs_type;
+type sysfs_h2omg_fuse, fs_type, sysfs_type;
+type sysfs_h2omg_dev, fs_type, sysfs_type;

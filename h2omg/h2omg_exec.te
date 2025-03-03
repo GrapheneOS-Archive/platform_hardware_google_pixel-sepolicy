@@ -3,10 +3,6 @@ type h2omg_vendor_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(h2omg_vendor);
 
-# allow h2omg_vendor vendor_shell_exec:file rx_file_perms;
-allow h2omg_vendor sysfs_h2omg:dir search;
-allow h2omg_vendor sysfs_h2omg:dir r_dir_perms;
-allow h2omg_vendor sysfs_h2omg:file rw_file_perms;
-
-allow h2omg_vendor sysfs_h2omgslg:file rw_file_perms;
-allow h2omg_vendor sysfs_h2omgatl:file rw_file_perms;
+allow h2omg_vendor sysfs_h2omg_drv:dir r_dir_perms;
+allow h2omg_vendor sysfs_h2omg_dev:dir r_dir_perms;
+allow h2omg_vendor sysfs_h2omg_fuse:file rw_file_perms;
