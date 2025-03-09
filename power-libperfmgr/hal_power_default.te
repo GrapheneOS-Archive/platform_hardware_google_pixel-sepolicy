@@ -35,6 +35,10 @@ allow hal_power_default sysfs_thermal:file rw_file_perms;
 allow hal_power_default sysfs_thermal:lnk_file r_file_perms;
 set_prop(hal_power_default, vendor_thermal_prop)
 
+# Allow hal_power to access IStats AIDL
+allow hal_power_default fwk_stats_service:service_manager find;
+binder_call(hal_power_default, stats_service_server);
+
 userdebug_or_eng(`
 # Allow reading /data/vendor/* for debugging
   allow hal_power_default vendor_data_file:file r_file_perms;
