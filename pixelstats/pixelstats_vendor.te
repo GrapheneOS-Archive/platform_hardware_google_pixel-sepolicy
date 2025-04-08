@@ -10,9 +10,6 @@ allow pixelstats_vendor self:netlink_kobject_uevent_socket create_socket_perms_n
 allow pixelstats_vendor mnt_vendor_file:dir search;
 get_prop(pixelstats_vendor, smart_idle_maint_enabled_prop)
 
-allow pixelstats_vendor fwk_stats_service:service_manager find;
-binder_call(pixelstats_vendor, stats_service_server)
-
 # Pixel MM Metrics: (Atoms: PixelMmMetricsPerHour, PixelMmMetricsPerDay,
 #                    CmaStatus, CmaStatusExt, ZramBdStat, ZramMmStat)
 allow pixelstats_vendor kernel:dir search;
@@ -22,15 +19,10 @@ allow pixelstats_vendor proc_pressure_cpu:file r_file_perms;
 allow pixelstats_vendor proc_pressure_io:file r_file_perms;
 allow pixelstats_vendor proc_pressure_mem:file r_file_perms;
 allow pixelstats_vendor proc_stat:file r_file_perms;
-allow pixelstats_vendor proc_vmstat:file r_file_perms;
 allow pixelstats_vendor sysfs_dma_heap:dir search;
 allow pixelstats_vendor sysfs_dma_heap:file r_file_perms;
-allow pixelstats_vendor sysfs_ion:dir search;
-allow pixelstats_vendor sysfs_ion:file r_file_perms;
 allow pixelstats_vendor sysfs_pixel_stat:dir r_dir_perms;
 allow pixelstats_vendor sysfs_pixel_stat:file r_file_perms;
-allow pixelstats_vendor sysfs_zram:dir search;
-allow pixelstats_vendor sysfs_zram:file r_file_perms;
 
 # Pixel MM Metrics 2024a2
 r_dir_file(pixelstats_vendor, proc_vendor_mm)
