@@ -19,8 +19,6 @@ allow pixelstats_vendor proc_pressure_cpu:file r_file_perms;
 allow pixelstats_vendor proc_pressure_io:file r_file_perms;
 allow pixelstats_vendor proc_pressure_mem:file r_file_perms;
 allow pixelstats_vendor proc_stat:file r_file_perms;
-allow pixelstats_vendor sysfs_dma_heap:dir search;
-allow pixelstats_vendor sysfs_dma_heap:file r_file_perms;
 allow pixelstats_vendor sysfs_pixel_stat:dir r_dir_perms;
 allow pixelstats_vendor sysfs_pixel_stat:file r_file_perms;
 
