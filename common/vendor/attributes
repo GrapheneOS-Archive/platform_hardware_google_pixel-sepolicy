@@ -3,3 +3,6 @@ attribute pixel_battery_service_type;
 
 #touch attribute for touch-related properties.
 attribute touch_property_type;
+
+# bluetooth attribute for bluetooth-related properties.
+attribute pixel_bluetooth_service_type;
