@@ -1,0 +1,2 @@
+# To allow Google Battery HAL to read logbuffers
+allow hal_googlebattery logbuffer_device:chr_file r_file_perms;
