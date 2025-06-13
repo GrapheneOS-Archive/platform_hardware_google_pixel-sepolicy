@@ -1,4 +1,0 @@
-# To find and bind Google Battery HAL
-allow pixelsystemservice_app hal_googlebattery_service:service_manager find;
-binder_call(pixelsystemservice_app, hal_googlebattery)
-
