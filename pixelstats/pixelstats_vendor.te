@@ -47,3 +47,6 @@ r_dir_file(pixelstats_vendor, sysfs_vendor_mm)
 
 # Pixel Water Intrusion Stats (h2omg)
 #  see h2omg/pixelstats_vendor.te for additional access policies
+
+# BP2A change
+unix_socket_connect(pixelstats_vendor, chre, hal_contexthub_default)
